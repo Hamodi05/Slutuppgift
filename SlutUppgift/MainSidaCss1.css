@@ -1,32 +1,29 @@
 body
-{
-	background-image: url(Moin-Logo2.png);
-	background-repeat: no-repeat;
-	background-color: lavender;
-	background-size: 300px;
-	background-position: center top;
-	position: absolute;
+{	
+ 	background-color: lavender;
+	border: 5px solid #8D6EAD;
+	width: 300px;
+	margin-left:640px;
+	margin-top: 170px;
+	margin-bottom: 170px;
+   	/*background: -webkit-linear-gradient(110deg, #ffc608 33%, rgba(0, 0, 0, 0) 33%), -webkit-linear-gradient(110deg, #dd0000 66%, #000 66%);*/
 }
-
+  
 .image 
 {
 	position: absolute;
 	background-repeat: no-repeat;
 	width: 300px;
 	position: center top;
-	margin-left: 640px;
-	margin-bottom: 1900px;
+	bottom: 520px;
 
 }
-
 
 .headerText1
 {
 	text-align: center;
-	margin-left: 635px;
-	height: 400px;
-	width: 300px;
-	margin-top: 100px;   
+	bottom: 540px; 
+	left: 673px; 
 	font-size: 35px;
 	color: #8D6EAD;
 	font-size: 60px;
@@ -34,9 +31,17 @@ body
   	text-decoration-color: #644E79;
 	font-family: "Courier New";
 	position: absolute;
-	border: 5px solid;
- 	border-color: #bc86e9;
-	background-color: white;
+	
 
 }
+
+.MakeAcc
+{
+	position: absolute;
+	color: #644E79;
+	border: 5px solid white;
+	background-color:white;
+	font-size: 22.6px;
+}
+
 
