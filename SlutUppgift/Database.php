@@ -6,6 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $password = $_POST['password'];
 
+    // Hash the password
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
     // SQLite database connection
     $db = new SQLite3('userdata.db');
 
@@ -16,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $db->prepare('INSERT INTO users (username, name, password) VALUES (:username, :name, :password)');
     $stmt->bindValue(':username', $username, SQLITE3_TEXT);
     $stmt->bindValue(':name', $name, SQLITE3_TEXT);
-    $stmt->bindValue(':password', $password, SQLITE3_TEXT);
+    $stmt->bindValue(':password', $hashedPassword, SQLITE3_TEXT);
 
     // Execute the statement
     $stmt->execute();
